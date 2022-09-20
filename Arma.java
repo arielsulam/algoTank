@@ -17,6 +17,22 @@ public class Arma {
 
     // Metodos
 
+    public int getVelocidadDisparo() {
+        return velocidadDisparo;
+    }
+
+    public void setVelocidadDisparo(int velocidadDisparo) {
+        this.velocidadDisparo = velocidadDisparo;
+    }
+
+    public boolean isAlgoTank() {
+        return isAlgoTank;
+    }
+
+    public void setAlgoTank(boolean algoTank) {
+        isAlgoTank = algoTank;
+    }
+
     //Crear proyectil
 
 }

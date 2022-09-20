@@ -6,5 +6,6 @@ public class TanqueEnemigo extends Tanque {
         super(posicionparam, resistenciaparam, velocidadDesplazamientoparam);
     }
 
+
     //Estrategia de ataque??
 }
