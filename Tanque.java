@@ -1,48 +1,48 @@
 package algotank;
 
-public abstract class Tanque {
+public class Tanque {
 
-    //Atributos
+    private Disparable disparable;
 
-    private int [] posicion = new int[2];
-
+    private int RESISTENCIA_INICIAL=100;
     private int resistencia;
 
-    private int velocidadDesplazamiento;
+    public Tanque (int resistencia){
+        this.resistencia = RESISTENCIA_INICIAL;
+        this.disparable = new Canion();
 
-
-    //Constructor
-
-    public Tanque(int [] posicionparam, int resistenciaparam, int velocidadDesplazamientoparam){
-        this.posicion=posicionparam;
-        this.resistencia=resistenciaparam;
-        this.velocidadDesplazamiento=velocidadDesplazamientoparam;
-    }
-    // Metodos
-
-
-    public int[] getPosicion() {
-        return posicion;
     }
 
-    public void setPosicion(int[] posicion) {
-        this.posicion = posicion;
-    }
-    public int getResistencia(){
+    public int getResistencia() {
         return resistencia;
     }
-    public void setResistencia(){
-        this.resistencia = resistencia;
+
+    public void disparar(){
+        this.disparable.disparar();
     }
 
-    public int getVelocidadDesplazamiento() {
-        return velocidadDesplazamiento;
+    public void recibirProyectil(Proyectil proyectil){
+
+        if (this.resistencia >= proyectil.getPoderDestructivo()){
+            this.resistencia= this.resistencia - proyectil.getPoderDestructivo();
+        }
+        else {
+            this.resistencia = 0;
+        }
     }
-    public void setVelocidadDesplazamiento(){
-        this.velocidadDesplazamiento=velocidadDesplazamiento;
+    public boolean estaVivo(){
+        return this.resistencia > 0;
     }
 
-    //Desplazarse
-    //Recibir disparos
-    //Disparar
+    public void recibirArma(Disparable disparable){
+     this.disparable=disparable;
+    }
+
+    public void recibirBonusVida(Bonus bonus) {
+
+        this.resistencia = (int) (this.resistencia * bonus.getBONUS_VIDA();
+
+    }
+
 }
+

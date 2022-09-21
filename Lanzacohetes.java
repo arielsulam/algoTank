@@ -1,22 +1,14 @@
 package algotank;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Canion {
+public class Lanzacohetes extends ArmaMunicionFinita {
 
 
-    private static int CANTIDAD_PROYECTILES = 20;
+    private static final int CANTIDAD_PROYECTILES = 50;
 
-    private ArrayList<Proyectil> proyectiles = new ArrayList<Proyectil>() ;
-
-    public Canion(){
-
-        for (int i = 0; i < CANTIDAD_PROYECTILES; i++) {
-            proyectiles.add(new Proyectil());
-        }
-
-
+    public Lanzacohetes(){
+        super(CANTIDAD_PROYECTILES);
     }
+
+
 }
 
