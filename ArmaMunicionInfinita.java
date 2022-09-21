@@ -1,6 +1,6 @@
 package algotank;
 
-public class ArmaMunicionInfinita implements Disparable{
+public class ArmaMunicionInfinita implements Disparable {
 
     //Ametralladora . Unica arma de municiones infinitas. Si se agregara un nuevo arma de estas caracteristicas
     //deberiamos segregar implementacion con herencia-
