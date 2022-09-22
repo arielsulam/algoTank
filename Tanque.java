@@ -40,7 +40,7 @@ public class Tanque {
 
     public void recibirBonusVida(Bonus bonus) {
 
-        this.resistencia = (int) (this.resistencia * bonus.getBONUS_VIDA();
+        this.resistencia = (int) (this.resistencia * bonus.getBonusVida());
 
     }
 
