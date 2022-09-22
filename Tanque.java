@@ -4,7 +4,7 @@ public class Tanque {
 
     private Disparable disparable;
 
-    private int RESISTENCIA_INICIAL=100;
+    private int RESISTENCIA_INICIAL=120;
     private int resistencia;
 
     public Tanque (int resistencia){
