@@ -4,6 +4,8 @@ public class Proyectil {
 
     private int poderDestructivo;
 
+    private int velocidadProyectil;
+
     public int getPoderDestructivo() {
         return poderDestructivo;
     }
@@ -12,6 +14,13 @@ public class Proyectil {
         this.poderDestructivo = poderDestructivo;
     }
 
+    public int getVelocidadProyectil() {
+        return velocidadProyectil;
+    }
+
+    public void setVelocidadProyectil(int velocidadProyectil) {
+        this.velocidadProyectil = velocidadProyectil;
+    }
     //Desplazarse
     //Destruir/impactar
 }

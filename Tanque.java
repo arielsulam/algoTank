@@ -7,9 +7,13 @@ public class Tanque {
     private int RESISTENCIA_INICIAL=100;
     private Resistencia resistencia;
 
+    private int VELOCIDAD_INICIAL=100;
+    private Velocidad velocidad;
+
     public Tanque (Resistencia resistencia){
         this.resistencia = new Resistencia(RESISTENCIA_INICIAL);
         this.disparable = new Canion();
+        this.velocidad = new Velocidad(VELOCIDAD_INICIAL);
 
     }
 
@@ -36,6 +40,10 @@ public class Tanque {
         this.resistencia.aumentarResistencia(bonus.getBonusVida());
     }
 
+    public void recibirBonusAtaque(Bonus bonus){
+        this.velocidad.aumentarVelocidad(bonus.getBonusAtaqueVel());
+
+    }
 
 
 }
