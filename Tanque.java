@@ -4,17 +4,17 @@ public class Tanque {
 
     private Disparable disparable;
 
-    private int RESISTENCIA_INICIAL=120;
-    private int resistencia;
+    private int RESISTENCIA_INICIAL=100;
+    private Resistencia resistencia;
 
-    public Tanque (int resistencia){
-        this.resistencia = RESISTENCIA_INICIAL;
+    public Tanque (Resistencia resistencia){
+        this.resistencia = new Resistencia(RESISTENCIA_INICIAL);
         this.disparable = new Canion();
 
     }
 
     public int getResistencia() {
-        return resistencia;
+        return this.resistencia.getValor();
     }
 
     public void disparar(){
@@ -22,27 +22,21 @@ public class Tanque {
     }
 
     public void recibirProyectil(Proyectil proyectil){
-
-        if (this.resistencia >= proyectil.getPoderDestructivo()){
-            this.resistencia= this.resistencia - proyectil.getPoderDestructivo();
-        }
-        else {
-            this.resistencia = 0;
-        }
+        this.resistencia.disminuirResistencia(proyectil.getPoderDestructivo();
     }
     public boolean estaVivo(){
-        return this.resistencia > 0;
+        return this.resistencia.getValor() > 0;
     }
 
     public void recibirArma(Disparable disparable){
      this.disparable=disparable;
     }
 
-    public void recibirBonusVida(Bonus bonus) {
-
-        this.resistencia = (int) (this.resistencia * bonus.getBonusVida());
-
+    public void recibirBonusVida(Bonus bonus){
+        this.resistencia.aumentarResistencia(bonus.getBonusVida());
     }
+
+
 
 }
 
