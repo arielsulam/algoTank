@@ -8,11 +8,11 @@ public abstract class FiniteAmmoGun implements Triggerable {
 
     private int PROJECTILE_SPEED = 100;
 
-    private final ArrayList<Proyectil> projectiles = new ArrayList<Proyectil>();
+    private final ArrayList<Projectile> projectiles = new ArrayList<Projectile>();
 
-    public ArmaMunicionFinita(int projectileQuantity) {
-        for (int i = 0; i < cantidadProyectiles; i++) {
-            this.projectiles.add(new Projectil());
+    public FiniteAmmoGun(int projectileQuantity) {
+        for (int i = 0; i < projectileQuantity; i++) {
+            this.projectiles.add(new Projectile());
         }
     }
 
