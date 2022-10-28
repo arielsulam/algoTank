@@ -2,18 +2,21 @@ package algotank;
 
 public class Bonus {
 
-    private double BONUS_VIDA = 1.4;
-    private double BONUS_ATAQUE_VEL= 1.2;
-    private double BONUS_ATAQUE_VELDIS = 1.3;
+    private double LIFE_BONUS = 1.4;
+    private double SPEED_ATTACK_BONUS = 1.2;
+    private double SPEEDDIS_ATTACK_BONUS = 1.3;
 
-    public double getBonusVida() {
-        return BONUS_VIDA;
+    public double getLifeBonus() {
+        return LIFE_BONUS;
     }
 
-    public double getBonusAtaqueVel(){
-        return BONUS_ATAQUE_VEL;
+    public double getAttackSpeedBonus() {
+        return SPEED_ATTACK_BONUS;
     }
-    public double getBonusAtaqueVelDis(){
-        return BONUS_ATAQUE_VELDIS;
+
+    public double getAttackSpeedDisBonus() {
+        return SPEEDDIS_ATTACK_BONUS;
     }
 }
+
+
